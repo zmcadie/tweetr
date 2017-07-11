@@ -1,0 +1,37 @@
+#tweet-display {
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  margin: 2em;
+}
+
+article.tweet header {
+  background-color: #eee;
+  padding: 10px;
+  height: 60px;
+}
+
+article.tweet .avatar {
+  height: 50px;
+  width: 50px;
+  float: left;
+}
+
+article.tweet .username {
+  float: left;
+  font-size: 150%;
+  padding-left: 5px;
+}
+
+article.tweet .handle {
+  float: right;
+}
+
+article.tweet section {
+  border-bottom: 1px solid darkgray;
+  padding: 25px 10px;
+}
+
+article.tweet footer {
+  font-size: 75%;
+  padding: 10px;
+}
