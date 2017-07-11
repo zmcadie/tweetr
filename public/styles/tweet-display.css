@@ -1,7 +1,12 @@
 #tweet-display {
   border: 1px solid darkgray;
   border-radius: 5px;
+  filter: opacity(75%);
   margin: 2em;
+}
+
+#tweet-display:hover {
+  filter: opacity(100%);
 }
 
 article.tweet header {
