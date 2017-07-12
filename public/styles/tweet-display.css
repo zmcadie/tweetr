@@ -1,18 +1,22 @@
-#tweet-display {
+article.tweet {
   border: 1px solid darkgray;
   border-radius: 5px;
-  filter: opacity(75%);
+  filter: opacity(60%);
   margin: 2em;
 }
 
-#tweet-display:hover {
+article.tweet:hover {
+  filter: opacity(100%);
+}
+
+article.tweet:hover .icons {
   filter: opacity(100%);
 }
 
 article.tweet header {
   background-color: #eee;
   padding: 10px;
-  height: 60px;
+  height: 70px;
 }
 
 article.tweet .avatar {
@@ -38,5 +42,16 @@ article.tweet section {
 
 article.tweet footer {
   font-size: 75%;
+  line-height: 20px;
   padding: 10px;
+}
+
+article.tweet .icons {
+  filter: opacity(0%);
+  float: right;
+}
+
+article.tweet .icons img {
+  height: 20px;
+  padding: 0 3px;
 }
