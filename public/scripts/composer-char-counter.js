@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(() => {
 
   $(".new-tweet textarea").on("keyup", function () {
     var text = $(this).val();
