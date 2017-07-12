@@ -77,9 +77,13 @@ $(() => {
         url: "/tweets",
         data: $form.serialize()
       })
-      .done(fetchTweets)
-      .done($form[0].reset())
+      .done(fetchTweets, resetComposer)
     }
+  }
+
+  const resetComposer = () => {
+    $("#compose-tweet")[0].reset();
+    $(".counter").text("140");
   }
 
   const validateTweet = (tweet) => {
