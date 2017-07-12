@@ -61,6 +61,42 @@ $(() => {
   };
 
   fetchTweets();
-  setInterval(fetchTweets, 500);
+
+     ///////////////////////////////////////
+    // in new tweet form,                //
+   //  stops redirection from submit,   //
+  //   submits tweet to /tweets object //
+ ///////////////////////////////////////
+  function handleNewTweet(event) {
+    event.preventDefault();
+    const $form = $(this);
+    const tweetText = $form.find("textarea").val();
+    if (validateTweet(tweetText)) {
+      $.ajax({
+        type: "POST",
+        url: "/tweets",
+        data: $form.serialize()
+      })
+      .done(fetchTweets)
+      .done($form[0].reset())
+    }
+  }
+
+  const validateTweet = (tweet) => {
+    if (!tweet) {
+      alert("Tweet cannot be empty!");
+      return false;
+    } else if (tweet.length > 140) {
+      alert("Tweet is too long!");
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  const $form = $("#compose-tweet");
+  $form.on("submit", handleNewTweet);
+
+
 
 });
