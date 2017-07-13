@@ -27,7 +27,9 @@ $(() => {
         return `${diffHours} hours ago`;
       }
     } else {
-      if (diffMinutes === 1) {
+      if (diffMinutes === 0) {
+        return `just now`;
+      } else if (diffMinutes === 1) {
         return `a minute ago`;
       } else {
         return `${diffMinutes} minutes ago`;
