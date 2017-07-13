@@ -38,6 +38,7 @@ article.tweet .handle {
 article.tweet section {
   border-bottom: 1px solid darkgray;
   padding: 25px 10px;
+  overflow-wrap: break-word;
 }
 
 article.tweet footer {
