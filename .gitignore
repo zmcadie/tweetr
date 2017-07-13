@@ -1,3 +1,5 @@
 node_modules/
 .env
 .DS_Store
+mongo_example.js
+npm-debug.log
