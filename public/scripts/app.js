@@ -27,7 +27,7 @@ $(() => {
         return `${diffHours} hours ago`;
       }
     } else {
-      if (diffMinutes === 0) {
+      if (diffMinutes < 1) {
         return `just now`;
       } else if (diffMinutes === 1) {
         return `a minute ago`;
@@ -69,7 +69,6 @@ $(() => {
     return $footer;
   };
 
-  // builds the actual tweet using above functions
   const createTweetElement = (tweetData) => {
     const $tweet = $("<article class='tweet'>")
       .append(createTweetHeader(tweetData))
@@ -78,15 +77,21 @@ $(() => {
     return $tweet;
   };
 
-  ////////////////////////////////////////////
-  //////                                   ///
-  ///// takes an array of tweet objects,  ////
-  ////  builds element for each          /////
-  ///                                   //////
-  ////////////////////////////////////////////
+  /////////////////////////////////////////////////////
+  //////                                            ///
+  ///// takes an array of tweet objects,           ////
+  ////  sorts by date and builds element for each /////
+  ///                                            //////
+  /////////////////////////////////////////////////////
+  const sortNewestFirst = (a, b) => {
+    return a.created_at - b.created_at;
+  };
+
+  // first empties tweet container on page
   const renderTweets = (tweetsArr) => {
     $("#tweets-container").empty();
-    tweetsArr.forEach(function (tweetObj) {
+    const sortedTweets = tweetsArr.sort(sortNewestFirst);
+    sortedTweets.forEach((tweetObj) => {
       const tweet = createTweetElement(tweetObj);
       $("#tweets-container").prepend(tweet);
     });
