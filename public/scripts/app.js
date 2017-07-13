@@ -127,6 +127,7 @@ $(() => {
     }
   };
 
+  // ES5 function to preserve scope of `this`
   function handleNewTweet(event) {
     event.preventDefault();
     const $form = $(this);

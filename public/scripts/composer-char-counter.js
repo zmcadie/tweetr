@@ -6,6 +6,7 @@ $(() => {
   ///                                                /////
   ////////////////////////////////////////////////////////
 
+  // ES5 function to preserve scope of `this`
   function updateCounter () {
     const text = $(this).val();
     const charLeft = 140 - (text.length);
