@@ -1,8 +1,10 @@
 $(() => {
 
-   /////////////////////////////////////////////////
-  // functions for building tweet element,       //
- // seperated from main to increase readability //
+     /////////////////////////////////////////////////
+    //                                             //
+   // functions for building tweet element,       //
+  // seperated from main to increase readability //
+ //                                             //
 /////////////////////////////////////////////////
   const createTweetHeader = (tweetData) => {
     const $header = $("<header>")
@@ -39,9 +41,11 @@ $(() => {
     return $tweet;
   };
 
-   ///////////////////////////////////////
-  // takes an array of tweet objects,  //
- //  builds element for each          //
+     ///////////////////////////////////////
+    //                                   //
+   // takes an array of tweet objects,  //
+  //  builds element for each          //
+ //                                   //
 ///////////////////////////////////////
   const renderTweets = (tweetsArr) => {
     $("#tweets-container").empty();
@@ -51,9 +55,11 @@ $(() => {
     })
   }
 
-   /////////////////////////////////
-  // fetch tweets from /tweets,  //
- //  renders to page            //
+     /////////////////////////////////
+    //                             //
+   // fetch tweets from /tweets,  //
+  //  renders to page            //
+ //                             //
 /////////////////////////////////
   const fetchTweets = () => {
     $.ajax("/tweets")
@@ -62,11 +68,13 @@ $(() => {
 
   fetchTweets();
 
-     ///////////////////////////////////////
+      ///////////////////////////////////////
+     //                                   //
     // in new tweet form,                //
    //  stops redirection from submit,   //
   //   submits tweet to /tweets object //
- ///////////////////////////////////////
+ //                                   //
+///////////////////////////////////////
   function handleNewTweet(event) {
     event.preventDefault();
     const $form = $(this);

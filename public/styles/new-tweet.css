@@ -26,3 +26,7 @@
   line-height: 2em;
   padding-right: 5px;
 }
+
+.invalid {
+  color: red;
+}

@@ -22,6 +22,24 @@
 
 }
 
-.invalid {
-  color: red;
+#nav-buttons {
+  float: right;
+  padding: 10px;
+}
+
+#nav-buttons .compose {
+  background-color: #eee;
+  border: 1px solid #000;
+  border-radius: 5px;
+  color: #00a087;
+  height: 60px;
+  font-size: 125%;
+  font-weight: 300;
+  opacity: 0.9;
+  width: 120px;
+}
+
+#nav-buttons .compose:hover {
+  color: #000;
+  opacity: 1;
 }
