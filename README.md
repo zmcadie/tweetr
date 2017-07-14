@@ -2,7 +2,13 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
+Full View
+:------------------------------------------------------:
 !["Main view"](https://github.com/zmcadie/tweetr/blob/master/docs/tweetr-main.png?raw=true)
+
+Tweets magnified             |  Mobile view
+:-------------------------:|:-------------------------:
+<img src="https://github.com/zmcadie/tweetr/blob/master/docs/tweets.png" height="600">  |  <img src="https://github.com/zmcadie/tweetr/blob/master/docs/mobile-tweetr.png" height="600">
 
 
 **To get started:**
@@ -11,12 +17,10 @@ Tweeter is a simple, single-page Twitter clone.
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
-Desktop view             |  Mobile view
-:-------------------------:|:-------------------------:
-!["Tweets view"](https://github.com/zmcadie/tweetr/blob/master/docs/tweets.png?raw=true)  |  !["Main view"](https://github.com/zmcadie/tweetr/blob/master/docs/mobile-tweetr.png?raw=true)
 
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
 - MongoDB
+- flash-message
