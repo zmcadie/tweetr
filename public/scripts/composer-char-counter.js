@@ -19,6 +19,6 @@ $(() => {
     }
   }
 
-  $(".new-tweet textarea").on("keyup", updateCounter);
+  $(".new-shout textarea").on("keyup", updateCounter);
 
 });

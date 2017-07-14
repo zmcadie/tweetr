@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
+    <title>SHOUTer - Home Page</title>
 
     <meta name="viewport" content="width=450">
 
@@ -11,16 +11,18 @@
 
     <link rel="stylesheet" href="/vendor/jquery.flash.css" type="text/css" />
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,700,700i" rel="stylesheet" />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-shout.css" type="text/css" />
 
-    <link rel="stylesheet" href="/styles/tweet-display.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/shout-display.css" type="text/css" />
+
+    <link rel="stylesheet" href="/styles/tagline.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -34,30 +36,33 @@
 
     <script type="text/javascript" src="/scripts/composer-button-nav.js"></script>
 
+    <script type="text/javascript" src="/scripts/tagline-randomizer.js"></script>
+
   </head>
 
   <body>
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png" >
-      <span class="header">Tweeter</span>
+      <img class="logo" src="/images/SHOUTer.png" >
+      <span class="logo-text"><span class="upper">SHOUT</span><span class="lower">er</span></span>
       <span id="nav-buttons">
-        <button class="compose">Compose</button>
+        <button class="compose">Shout!</button>
       </span>
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form id="compose-tweet" action="/tweets/" method="POST">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
+      <h2 id="tagline"><span class="reg1"></span><span class="bold"></span><span class="reg2"></span></h2>
+      <section class="new-shout">
+        <h3>Say your piece</h3>
+        <form id="compose-shout" action="/shouts/" method="POST">
+          <textarea name="text" placeholder="What are you mumbling about?"></textarea>
+          <input type="submit" value="Shout it">
           <span class="counter">140</span>
         </form>
       </section>
-      <section id="tweets-container">
+      <section id="shouts-container">
       </section>
     </main>
 

@@ -39,28 +39,28 @@ $(() => {
 
   //////////////////////////////////////////////////////
   //////                                             ///
-  ///// functions for building tweet element,       ////
+  ///// functions for building shout  element,      ////
   //// seperated from main to increase readability /////
   ///                                             //////
   //////////////////////////////////////////////////////
-  const createTweetHeader = (tweetData) => {
+  const createShoutHeader = (shoutData) => {
     const $header = $("<header>")
-      .append($("<img class='avatar' src='" + tweetData.user.avatars.small + "'>"))
-      .append($("<div class='username'>").text(tweetData.user.name))
-      .append($("<div class='handle'>").text(tweetData.user.handle));
+      .append($("<img class='avatar' src='" + shoutData.user.avatars.small + "'>"))
+      .append($("<div class='username'>").text(shoutData.user.name))
+      .append($("<div class='handle'>").text(shoutData.user.handle));
     return $header;
   };
 
-  const createTweetBody = (tweetData) => {
+  const createShoutBody = (shoutData) => {
     const $body = $("<section>")
-      .text(tweetData.content.text);
+      .text(shoutData.content.text);
     return $body;
   };
 
   // Icons made by http://www.flaticon.com/authors/madebyoliver from www.flaticon.com
-  const createTweetFooter = (tweetData) => {
+  const createShoutFooter = (shoutData) => {
     const $footer = $("<footer>")
-      .text(timeSince(tweetData.created_at))
+      .text(timeSince(shoutData.created_at))
       .append($("<span class='icons'>")
         .append($("<img src='/images/flag.png'>"))
         .append($("<img src='/images/arrows.png'>"))
@@ -69,17 +69,17 @@ $(() => {
     return $footer;
   };
 
-  const createTweetElement = (tweetData) => {
-    const $tweet = $("<article class='tweet'>")
-      .append(createTweetHeader(tweetData))
-      .append(createTweetBody(tweetData))
-      .append(createTweetFooter(tweetData));
-    return $tweet;
+  const createShoutElement = (shoutData) => {
+    const $shout = $("<article class='shout'>")
+      .append(createShoutHeader(shoutData))
+      .append(createShoutBody(shoutData))
+      .append(createShoutFooter(shoutData));
+    return $shout;
   };
 
   /////////////////////////////////////////////////////
   //////                                            ///
-  ///// takes an array of tweet objects,           ////
+  ///// takes an array of shout objects,           ////
   ////  sorts by date and builds element for each /////
   ///                                            //////
   /////////////////////////////////////////////////////
@@ -87,47 +87,47 @@ $(() => {
     return a.created_at - b.created_at;
   };
 
-  // first empties tweet container on page
-  const renderTweets = (tweetsArr) => {
-    $("#tweets-container").empty();
-    const sortedTweets = tweetsArr.sort(sortNewestFirst);
-    sortedTweets.forEach((tweetObj) => {
-      const tweet = createTweetElement(tweetObj);
-      $("#tweets-container").prepend(tweet);
+  // first empties shout container on page
+  const renderShouts = (shoutsArr) => {
+    $("#shouts-container").empty();
+    const sortedShouts = shoutsArr.sort(sortNewestFirst);
+    sortedShouts.forEach((shoutObj) => {
+      const shout = createShoutElement(shoutObj);
+      $("#shouts-container").prepend(shout);
     });
   };
 
   //////////////////////////////////////
   //////                             ///
-  ///// fetch tweets from /tweets,  ////
+  ///// fetch shouts from /shouts,  ////
   ////  renders to page            /////
   ///                             //////
   //////////////////////////////////////
-  const fetchTweets = () => {
-    $.ajax("/tweets")
-      .done(renderTweets);
+  const fetchShouts = () => {
+    $.ajax("/shouts")
+      .done(renderShouts);
   };
 
-  fetchTweets();
+  fetchShouts();
 
   /////////////////////////////////////////////
   ///////                                   ///
-  ////// in new tweet form,                ////
+  ////// in new shout form,                ////
   /////  stops redirection from submit,   /////
-  ////   submits tweet to /tweets object //////
+  ////   submits shout to /shouts object //////
   ///                                   ///////
   /////////////////////////////////////////////
   const resetComposer = () => {
-    $("#compose-tweet")[0].reset();
+    $("#compose-shout")[0].reset();
     $(".counter").text("140");
   };
 
-  const validateTweet = (tweet) => {
-    if (!tweet) {
-      $.flash("Tweet cannot be empty!");
+  const validateShout = (shout) => {
+    if (!shout) {
+      $.flash("shout cannot be empty!");
       return false;
-    } else if (tweet.length > 140) {
-      $.flash("Tweet is too long!");
+    } else if (shout.length > 140) {
+      $.flash("shout is too long!");
       return false;
     } else {
       return true;
@@ -135,21 +135,21 @@ $(() => {
   };
 
   // ES5 function to preserve scope of `this`
-  function handleNewTweet(event) {
+  function handleNewShout(event) {
     event.preventDefault();
     const $form = $(this);
-    const tweetText = $form.find("textarea").val();
-    if (validateTweet(tweetText)) {
+    const shoutText = $form.find("textarea").val();
+    if (validateShout(shoutText)) {
       $.ajax({
         type: "POST",
-        url: "/tweets",
+        url: "/shouts",
         data: $form.serialize()
       })
-        .done(fetchTweets, resetComposer);
+        .done(fetchShouts, resetComposer);
     }
   }
 
-  const $form = $("#compose-tweet");
-  $form.on("submit", handleNewTweet);
+  const $form = $("#compose-shout");
+  $form.on("submit", handleNewShout);
 
 });

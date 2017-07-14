@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 const {MongoClient} = require("mongodb");
-const MONGODB_URI = "mongodb://localhost:27017/tweeter";
+const MONGODB_URI = "mongodb://localhost:27017/shouter";
 
 MongoClient.connect(MONGODB_URI, (err, db) => {
   if (err) {
@@ -29,14 +29,14 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   ///////                                                         ///
   ////// The `data-helpers` module interfaces with the database, ////
   /////  exports function that expects `db` parameter. Pass to  /////
-  ////   tweetsRoutes to define routes to interact with data.  //////
+  ////   shoutsRoutes to define routes to interact with data.  //////
   ///                                                         ///////
   ///////////////////////////////////////////////////////////////////
   const DataHelpers = require("./lib/data-helpers.js")(db);
-  const tweetsRoutes = require("./routes/tweets")(DataHelpers);
+  const shoutsRoutes = require("./routes/shouts")(DataHelpers);
 
-  // Mount the tweets routes at the "/tweets" path prefix:
-  app.use("/tweets", tweetsRoutes);
+  // Mount the shouts routes at the "/shouts" path prefix:
+  app.use("/shouts", shoutsRoutes);
 
   app.listen(PORT, () => {
     console.log("Example app listening on port " + PORT);

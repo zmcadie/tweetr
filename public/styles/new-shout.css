@@ -1,0 +1,46 @@
+.new-shout {
+  background-color: #eee;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  margin: 2em;
+}
+
+.new-shout h3 {
+  border-bottom: 1px solid darkgray;
+  padding: 0 15px;
+}
+
+.new-shout form {
+  padding: 0 15px 15px 15px;
+}
+
+.new-shout textarea {
+  height: 5em;
+  line-height: 1.5;
+  padding: 5px;
+  width: 100%;
+}
+
+/*////////////////////////////////////////////////////////
+//////                                                 ///
+///// changing font size of input on mobile to avoid, ////
+////  as much as possible, auto-zoom on typing.      /////
+///                                                 //////
+////////////////////////////////////////////////////////*/
+@media (max-width: 600px) {
+  .new-shout textarea {
+    font-size: 150%;
+  }
+}
+
+.new-shout .counter {
+  float: right;
+  font-size: 90%;
+  font-weight: 300;
+  line-height: 2em;
+  padding-right: 5px;
+}
+
+.invalid {
+  color: red;
+}

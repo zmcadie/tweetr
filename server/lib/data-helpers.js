@@ -2,19 +2,19 @@
 
 //////////////////////////////////////////////////////////////////////////////
 /////                                                                      ///
-////  Defines helper functions for saving and getting tweets to database  ////
+////  Defines helper functions for saving and getting shout to database  ////
 ///                                                                      /////
 //////////////////////////////////////////////////////////////////////////////
 module.exports = function makeDataHelpers(db) {
   return {
 
-    saveTweet: (newTweet, callback) => {
-      db.collection("tweets").insertOne(newTweet);
+    saveShout: (newShout, callback) => {
+      db.collection("shout").insertOne(newShout);
       callback(null, true);
     },
 
-    getTweets: (callback) => {
-      db.collection("tweets").find().toArray(callback);
+    getShouts: (callback) => {
+      db.collection("shout").find().toArray(callback);
     }
 
   };

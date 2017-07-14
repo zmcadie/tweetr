@@ -1,58 +1,58 @@
-article.tweet {
+article.shout {
   border: 1px solid darkgray;
   border-radius: 5px;
   filter: opacity(60%);
   margin: 2em;
 }
 
-article.tweet:hover {
+article.shout:hover {
   filter: opacity(100%);
 }
 
-article.tweet:hover .icons {
+article.shout:hover .icons {
   filter: opacity(100%);
 }
 
-article.tweet header {
+article.shout header {
   background-color: #eee;
   padding: 10px;
   height: 70px;
 }
 
-article.tweet .avatar {
+article.shout .avatar {
   height: 50px;
   width: 50px;
   float: left;
 }
 
-article.tweet .username {
+article.shout .username {
   float: left;
   font-size: 150%;
   padding-left: 5px;
 }
 
-article.tweet .handle {
+article.shout .handle {
   float: right;
 }
 
-article.tweet section {
+article.shout section {
   border-bottom: 1px solid darkgray;
   padding: 25px 10px;
   overflow-wrap: break-word;
 }
 
-article.tweet footer {
+article.shout footer {
   font-size: 75%;
   line-height: 20px;
   padding: 10px;
 }
 
-article.tweet .icons {
+article.shout .icons {
   filter: opacity(0%);
   float: right;
 }
 
-article.tweet .icons img {
+article.shout .icons img {
   height: 20px;
   padding: 0 3px;
 }

@@ -1,5 +1,5 @@
 #nav-bar {
-  background-color: #00a087;
+  background-color: #FF4136;
   color: #e8fdff;
   height: 80px;
   padding: 0 2em;
@@ -15,11 +15,16 @@
   width: 80px;
 }
 
-#nav-bar .header {
+#nav-bar .logo-text {
   float: left;
   font-size: 200%;
   line-height: 80px;
+}
 
+#nav-bar .logo-text .lower {
+  color: black;
+  font-size: 80%;
+  font-weight: 300;
 }
 
 #nav-buttons {
@@ -31,7 +36,7 @@
   background-color: #eee;
   border: 1px solid #000;
   border-radius: 5px;
-  color: #00a087;
+  color: #FF4136;
   height: 60px;
   font-size: 125%;
   font-weight: 300;

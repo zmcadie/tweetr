@@ -1,7 +1,6 @@
 #flash {
     background-color: #eee;
     border-radius: 0 0 40px 40px;
-    color: #00a087;
     cursor: pointer;
     font-size: 25px;
     left: 0px;
@@ -20,7 +19,7 @@
 
 #flash div
 {
-    color: #00a087;
+    color: #FF4136;
 }
 
 #flash a

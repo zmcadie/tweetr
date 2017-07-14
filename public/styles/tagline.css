@@ -1,0 +1,13 @@
+#tagline {
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+
+#tagline .bold {
+  border: 1px solid black;
+  border-radius: 5px;
+  color: #FF4136;
+  font-size: 125%;
+  padding: 1px;
+}

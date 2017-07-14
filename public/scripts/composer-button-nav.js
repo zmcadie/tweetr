@@ -2,14 +2,14 @@ $(() => {
 
   ////////////////////////////////////////////////////////////
   /////                                                    ///
-  //// toggleslides new tweet form when button is clicked ////
+  //// toggleslides new shout form when button is clicked ////
   ///                                                    /////
   ////////////////////////////////////////////////////////////
-  $(".new-tweet").hide();
+  $(".new-shout").hide();
 
   $("#nav-buttons .compose").on("click", () => {
-    $(".new-tweet").slideToggle(() => {
-      $(".new-tweet textarea").focus();
+    $(".new-shout").slideToggle(() => {
+      $(".new-shout textarea").focus();
     });
   });
 
