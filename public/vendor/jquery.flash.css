@@ -1,0 +1,31 @@
+#flash {
+    background-color: #eee;
+    border-radius: 0 0 40px 40px;
+    color: #00a087;
+    cursor: pointer;
+    font-size: 25px;
+    left: 0px;
+    line-height: 24px;
+    margin: 0;
+    -moz-border-radius: 0 0 40px 40px;
+    padding: 25px 20px;
+    position: fixed;
+    text-align: center;
+    top: 0px;
+    -webkit-border-bottom-left-radius: 40px;
+    -webkit-border-bottom-right-radius: 40px;
+    width: 300px;
+    z-index: 10000;
+}
+
+#flash div
+{
+    color: #00a087;
+}
+
+#flash a
+{
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
