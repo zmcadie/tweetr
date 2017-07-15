@@ -1,14 +1,14 @@
-# Tweeter Project
+# SHOUTer Project
 
-Tweeter is a simple, single-page Twitter clone.
+SHOUTer is a simple, single-page Twitter clone.
 
 Full View
 :------------------------------------------------------:
-!["Main view"](https://github.com/zmcadie/tweetr/blob/master/docs/tweetr-main.png?raw=true)
+!["desktop view"](https://github.com/zmcadie/tweetr/blob/master/docs/shouter-main.png?raw=true)
 
-Tweets magnified             |  Mobile view
-:-------------------------:|:-------------------------:
-<img src="https://github.com/zmcadie/tweetr/blob/master/docs/tweets.png" height="600">  |  <img src="https://github.com/zmcadie/tweetr/blob/master/docs/mobile-tweetr.png" height="600">
+Mobile site with shout box  |  Mobile site without shout box
+:--------------------------:|:-----------------------------:
+<img src="https://github.com/zmcadie/tweetr/blob/master/docs/mobile-compose.png" height="600">  |  <img src="https://github.com/zmcadie/tweetr/blob/master/docs/mobile-shouts.png" height="600">
 
 
 **To get started:**
