@@ -8,7 +8,7 @@ Full View
 
 Mobile site with shout box  |  Mobile site without shout box
 :--------------------------:|:-----------------------------:
-<img src="https://github.com/zmcadie/tweetr/blob/master/docs/mobile-compose.png" height="600">  |  <img src="https://github.com/zmcadie/tweetr/blob/master/docs/mobile-shouts.png" height="600">
+<img src="https://github.com/zmcadie/tweetr/blob/master/docs/mobile-compose.PNG" height="600">  |  <img src="https://github.com/zmcadie/tweetr/blob/master/docs/mobile-shouts.PNG" height="600">
 
 
 **To get started:**
